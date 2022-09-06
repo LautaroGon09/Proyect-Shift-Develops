@@ -14,15 +14,27 @@
 
    
 
-    <nav class="px-3     lg:p-auto lg:m-auto h-24 rounded bg-teal-800 md:flex  md:items-center md:justify-between ">
+  <nav class="px-3     lg:p-auto lg:m-auto h-24 rounded bg-teal-800 md:flex  md:items-center md:justify-between ">
 
+    <div class="flex justify-between items-center pl-0 lg:pl-20">
+      <span class="text-xl md:text-2xl lg:text-3xl font-Bold">
+        <img class="h-24 inline" src="imgs/Logo.png" alt="">
+        Ropa de seguridad Viera
+      </span>
+
+      <span class=" text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"> </ion-icon>
+      </span>
+    </div>
+
+    
 
        <ul class="  md:flex md:itemes-center  z-[1] md:z-auto md:static absolute
-             bg-teal-500 md:bg-teal-800 w-80 left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-6
+             bg-teal-600 md:bg-teal-800 w-80 left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-6
             md:opacity-100 opacity-0 o md:left-[-400px] transition-all ease-in
             duration-500 pr-0 lg:pr-10">
           <li class="mx-1 ml-5  lg:mx-3 text-center  my-5 md:my-0"> 
-           <a href="" class="text-xl text-center  hover:text-cyan-300 duration-200">Inicio</a>
+           <a href="#" class="text-xl text-center  hover:text-cyan-300 duration-200">Inicio</a>
           </li>
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
@@ -34,10 +46,10 @@
           </li>
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="" class="bg-cyan-500  text-white font-semibold duration-500 px-6 py-2
+            <a href="../segunda_ent/negocio/login.php" class="bg-cyan-500  text-white font-semibold duration-500 px-6 py-2
                 mx-3 hover:bg-cyan-500 rounded ">
               iniciar sesion
-            </a>
+            </button>
           </li>
           
 
@@ -47,6 +59,8 @@
    
     
     </nav>
+
+
 
 
 
@@ -115,9 +129,9 @@
               </h4>
               <ul class="mt-auto flex justify-center hover:text-white">
     
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1 " src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>
@@ -146,9 +160,9 @@
         remove('top-[25%]') , list.classList.remove('opacity-100'))
       }
     </script>
-    <script src="./src/app.js"></script>
-    <script src="./src/jquer.js"></script>
+    <script src="app.js"></script>
+    <script src="jquer.js"></script>
 </body>
 </html>
 
-<!--npx tailwindcss -i ./src/input.css -o ./src/estilo.css --watch  -->
+<!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->
