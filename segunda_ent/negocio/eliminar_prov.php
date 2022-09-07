@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Eliminar</title>
+    <title>Eliminar Proveedor</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 
         <input placeholder="Ingrese Email" type="email" name="mail" maxlength="30" size="40">
 
-        <input type="submit" value="Buscar Usuario" name="buscar">
+        <input type="submit" value="Buscar Proveedor" name="buscar">
 
     </form>
 
@@ -21,25 +21,23 @@
     require_once("../dato/conexion.php");
     require_once("miapp.php");
 
-    $consulta = mysqli_query($con, "SELECT * FROM usuario") or die(mysqli_error($con));
+    $consulta = mysqli_query($con, "SELECT * FROM proveedor") or die(mysqli_error($con));
 
     ?>
 
     <table width="40%" border="1">
         <tr>
             <td>Id</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
             <td>Email</td>
+            <td>Direccion</td>
             <td>Accion</td>
         </tr>
         <?php
 
         while ($filas = mysqli_fetch_array($consulta)) {
-            $IDu = $filas['IdUsuario'];
-            $nom = $filas['Nombre'];
-            $ape = $filas['Apellido'];
+            $IDe = $filas['IdEmpresa'];
             $email = $filas['Email'];
+            $direccion = $filas['Direccion'];
 
             if (isset($_POST['buscar'])) {
                 if (isset($_POST['mail'])) {
@@ -53,28 +51,26 @@
 
                     $email = $_POST['mail'];
 
-                    if (buscar_datos($email) == true) {
-                        $consulta = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
+                    if (buscar_datos_prov($email) == true) {
+                        $consulta = mysqli_query($con, "SELECT * FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
                         while ($filas = mysqli_fetch_array($consulta)) {
-                            $IDu = $filas['IdUsuario'];
-                            $nom = $filas['Nombre'];
-                            $ape = $filas['Apellido'];
+                            $IDe = $filas['IdEmpresa'];
                             $email = $filas['Email'];
+                            $direccion = $filas['Direccion'];
                         }
                     } else {
                         $email = null;
-                        echo "<p style='color:red;'>El usuario ingresado no existe </p>";
+                        echo "<p style='color:red;'>El proveedor ingresado no existe </p>";
                         die;
                     }
                 }
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:black;'>" . $IDu . "</p>"; ?></td>
-                <td><?php echo "<p style='color:black;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:black;'>" . $ape . "</p>"; ?></td>
+                <td><?php echo "<p style='color:black;'>" . $IDe . "</p>"; ?></td>
                 <td><?php echo "<p style='color:black;'>" . $email . "</p>"; ?></td>
+                <td><?php echo "<p style='color:black;'>" . $direccion . "</p>"; ?></td>
                 <td>
                     <form method="post" action="">
                         <input type="submit" value="Eliminar" name="eliminar" />
@@ -88,10 +84,10 @@
 
 
         if (isset($_POST['eliminar']))
-        if (eliminar($email)  == true) {
-            echo "<p style='color:green;'>Se ha eliminado correctamente</p>";
-            header('refresh: 1; url=../negocio/eliminar.php');
-        }
+            if (eliminar_prov($email)  == true) {
+                echo "<p style='color:green;'>Se ha eliminado correctamente</p>";
+                header('refresh: 1; url=../dise/accion.php');
+            }
 
 
         ?>
@@ -102,7 +98,6 @@
     <head>
         <meta charset="UTF-8">
 
-        <title>eliminar </title>
     </head>
 </body>
 

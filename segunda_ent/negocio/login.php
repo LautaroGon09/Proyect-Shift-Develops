@@ -1,13 +1,22 @@
-<?php include('../../includes/header.php') ?>
 
-      
-      <h2 >Hola buenas</h2>
+     <?php include("../../includes/header.php")?>
+     <div>
+        <form name="formulario" method="post" action="" class='bg-teal-800 h-12'>
+
+
+        <input placeholder="Email" type="email" name="mail" maxlength="30" size="40">
+
+        <input placeholder="Contraseña" type="password" name="pass" maxlength="30" size="40">
+
+        <input type="submit" value="Ingresar" name="ingresar">
+
+    </form>
+     </div>
    
+    
 
+    <?php include("../../includes/footer.php")?>
 
-
-<?php include('../../includes/footer.php') ?>
-  
 <?php
 require_once("miapp.php");
 if (isset($_POST['ingresar'])) {

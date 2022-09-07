@@ -28,10 +28,38 @@ function existe($email)
 
     return true;
 }
+function existe_prov($email)
+{
+    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    $query = mysqli_query($con, "SELECT IdEmpresa FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
 function buscar_datos($email)
 {
     $con = mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
+function buscar_datos_prov($email)
+{
+    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    $query = mysqli_query($con, "SELECT * FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);
@@ -47,7 +75,7 @@ function existe_cliente($email, $password)
 {
 
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    $query = mysqli_query($con, "SELECT * FROM USUARIO WHERE email='" . $email . "' and contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
 
@@ -56,7 +84,7 @@ function existe_cliente($email, $password)
         return false;
     }
 
-    $query = mysqli_query($con, "SELECT * FROM CLIENTE WHERE IdUsuario=" . $row["IdUsuario"]);
+    $query = mysqli_query($con, "SELECT * FROM cliente WHERE IdUsuario=" . $row["IdUsuario"]);
 
     $row = $query->fetch_assoc();
 
@@ -98,7 +126,7 @@ function existe_vendedor($email, $password)
 {
 
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    $query = mysqli_query($con, "SELECT * FROM USUARIO WHERE email='" . $email . "' and contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
 
@@ -107,7 +135,7 @@ function existe_vendedor($email, $password)
         return false;
     }
 
-    $query = mysqli_query($con, "SELECT * FROM Vendedor WHERE IdUsuario=" . $row["IdUsuario"]);
+    $query = mysqli_query($con, "SELECT * FROM vendedor WHERE IdUsuario=" . $row["IdUsuario"]);
 
     $row = $query->fetch_assoc();
 
@@ -123,7 +151,7 @@ function existe_comprador($email, $password)
 {
 
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    $query = mysqli_query($con, "SELECT * FROM USUARIO WHERE email='" . $email . "' and contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
 
@@ -149,7 +177,7 @@ function existe_jefe($email, $password)
 {
 
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    $query = mysqli_query($con, "SELECT * FROM USUARIO WHERE email='" . $email . "' and contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
 
@@ -177,7 +205,9 @@ function reg_clin($nombre, $apellido, $email, $password)
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     mysqli_query($con, "insert into cliente values (" . mysqli_insert_id($con) . ")");
     (mysqli_error($con));
-    mysqli_close($con);
+
+        mysqli_close($con);
+    
     return true;
 }
 
@@ -186,7 +216,7 @@ function agregar_vendedor($nombre, $apellido, $email, $password)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
-    mysqli_query($con, "insert into Vendedor values (" . mysqli_insert_id($con) . ")");
+    mysqli_query($con, "insert into vendedor values (" . mysqli_insert_id($con) . ")");
     (mysqli_error($con));
     mysqli_close($con);
     return true;
@@ -196,35 +226,40 @@ function agregar_comprador($nombre, $apellido, $email, $password)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
-    mysqli_query($con, "insert into Comprador values (" . mysqli_insert_id($con) . ")");
+    mysqli_query($con, "insert into comprador values (" . mysqli_insert_id($con) . ")");
     (mysqli_error($con));
     mysqli_close($con);
     return true;
 }
-function eliminar_cliente($email)
+function agregar_prov($email, $direccion)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-
-    $query = mysqli_query($con, "DELETE FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
-    $row = $query->fetch_assoc();
-
-    if ($row == null) {
-        mysqli_close($con);
-        return false;
-    }
-
-    $query = mysqli_query($con, "DELETE FROM cliente WHERE IdUsuario=" . $row["IdUsuario"]);
-
-    $row = $query->fetch_assoc();
-
-    if ($row == null) {
-        mysqli_close($con);
-        return false;
-    }
-
+    mysqli_query($con, "insert into proveedor (Email, Direccion) VALUES( '$email', '$direccion')") or die;
+    (mysqli_error($con));
     mysqli_close($con);
-    return  true;
+    return true;
 }
+function eliminar( $email)
+{
+    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    mysqli_query($con, "DELETE FROM usuario  WHERE Email='" . $email . "'") or die;
+    (mysqli_error($con));
+    mysqli_close($con);
+
+    return true;
+}
+function eliminar_prov( $email)
+{
+    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    mysqli_query($con, "DELETE FROM proveedor  WHERE Email='" . $email . "'") or die;
+    (mysqli_error($con));
+    mysqli_close($con);
+
+    return true;
+}
+
+
+
 
 function actualizar($nombre, $apellido, $password, $email,  $ID)
 {
@@ -236,10 +271,3 @@ function actualizar($nombre, $apellido, $password, $email,  $ID)
     return true;
 }
 
-// function mostrar()
-// {
-//     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-//     mysqli_query($con, "SELECT * FROM usuarios") or die(mysqli_error($con));
-//     mysqli_close($con);
-//     return true;
-// }

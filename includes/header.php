@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../../src/estilos.css">
+    <link rel="stylesheet" href="../../src/estilos.css">    \
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="" >
 
@@ -58,7 +58,7 @@
               <li><a href=""><img class="h-12 px-5" src="imgs/Uniforme.png" alt=""></a></li>
               <li><input class="h-6" type="text"></li>
               <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>
-              <li><a href=""><img class="h-12 px-5" src="imgs/Ofertas.png" alt=""></a></li>        
+              <li><a href=""><img class="h-12 px-5" src="../imgs/Ofertas.png" alt=""></a></li>        
               <li><a href=""><img class="h-12 px-5" src="imgs/Combos.png" alt=""></a></li>
               <li><a href=""><img class="h-12 px-5" src="imgs/Botas.png" alt=""></a></li>
             </ul>

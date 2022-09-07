@@ -88,16 +88,17 @@
 
 
         if (isset($_POST['eliminar']))
-        if (eliminar($email)  == true) {
-            echo "<p style='color:green;'>Se ha eliminado correctamente</p>";
-            header('refresh: 1; url=../negocio/eliminar.php');
+                echo "anashe";
+             else {
+                echo "f";
+            
         }
 
 
         ?>
     </table>
     <br />
-    <a href="../dise/accion.php">Regresar</a>
+    <a href="accion.php">Regresar</a>
 
     <head>
         <meta charset="UTF-8">
