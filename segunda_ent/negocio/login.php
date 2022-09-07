@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-    <title>Ingresar</title>
-</head>
-
-<body>
+<?php require('./layout/header.php') ?>
     <form name="formulario" method="post" action="">
 
         <input placeholder="Email" type="email" name="mail" maxlength="30" size="40">
@@ -18,10 +9,7 @@
 
     </form>
 
-</body>
-
-</html>
-
+    <?php require('./layout/footer.php') ?>
 <?php
 require_once("miapp.php");
 if (isset($_POST['ingresar'])) {
