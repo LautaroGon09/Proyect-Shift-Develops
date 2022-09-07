@@ -1,5 +1,4 @@
-<h2 >Hola buenas</h2>
-    </div>
+</div>
   </div>
     
    
@@ -9,7 +8,7 @@
     <div class="grid  w-full bg-teal-900">
 
       <div class="flex  justify-center  items-center">
-        <img class="h-20  md:h-28 inline  " src="imgs/Logo.png" alt="">
+        <img class="h-20  md:h-28 inline  " src="../src/imgs/Logo.png" alt="">
         <span class="font-semibold text-xl md:text-2xl  text-white ">
           Ropa de Seguridad
         </span>
@@ -40,7 +39,7 @@
             Redes 
           </h4>
             <ul class="mt-auto flex    hover:text-white">
-              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src=../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
               <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
               <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
             </ul>

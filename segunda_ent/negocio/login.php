@@ -1,15 +1,13 @@
-<?php require('./layout/header.php') ?>
-    <form name="formulario" method="post" action="">
+<?php include('../../includes/header.php') ?>
 
-        <input placeholder="Email" type="email" name="mail" maxlength="30" size="40">
+      
+      <h2 >Hola buenas</h2>
+   
 
-        <input placeholder="Contraseña" type="password" name="pass" maxlength="30" size="40">
 
-        <input type="submit" value="Ingresar" name="ingresar">
 
-    </form>
-
-    <?php require('./layout/footer.php') ?>
+<?php include('../../includes/footer.php') ?>
+  
 <?php
 require_once("miapp.php");
 if (isset($_POST['ingresar'])) {

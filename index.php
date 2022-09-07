@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="src/estilos.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -42,9 +42,8 @@
       </li>
 
       <li class="mx-1   text-center  my-5 md:my-0">
-        <button class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
-                          px-2 hover:bg-cyan-500 rounded ">iniciar sesion
-        </button>
+        <a href="segunda_ent/negocio/login.php" class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
+                          px-2 hover:bg-cyan-500 rounded ">iniciar sesion ></a>
       </li>
    
     </ul>
@@ -85,13 +84,14 @@
       </div>
     </div>
       
+      
     <div class="Contenido border-b border-red-900 py-5 mr-5 w-full flex h-screen">
       <h2 >Hola buenas</h2>
     </div>
   </div>
     
    
-  
+
   <footer class="flex h-auto ">
     
     <div class="grid  w-full bg-teal-900">
