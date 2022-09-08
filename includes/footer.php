@@ -70,7 +70,7 @@
     </script>
     <script src="app.js"></script>
     <script src="jquer.js"></script>
+
 </body>
 </html>
-
 <!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->

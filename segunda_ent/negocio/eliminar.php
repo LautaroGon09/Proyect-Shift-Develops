@@ -25,7 +25,7 @@
 
     ?>
 
-    <table width="40%" border="1">
+    <table width="40%"  border="1">
         <tr>
             <td>Id</td>
             <td>Nombre</td>
