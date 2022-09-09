@@ -7,7 +7,7 @@
     <title>Registrarse</title>
 </head>
 
-<body>
+<body class>
 
     <form name="formulario" method="post" action="">
 
