@@ -31,12 +31,12 @@
     </form>
 
     <?php
-    require_once("miapp.php");
+    require_once("miapp_user.php");
     if (isset($_POST['agregar'])) {
 
         if (isset($_POST['nom'])  && isset($_POST['ape']) && isset($_POST['mail'])  && isset($_POST['pass'])) {
 
-            $patron = '/[1-9]/';
+            $patron = '/[0-9]/';
 
             if (preg_match("$patron", ($_POST['nom']))) {
                 echo "<p style='color:red;'>Solo letras en el nombre </p>";
@@ -87,20 +87,21 @@
                     if (($_POST['rol']) == "1") {
                         if (agregar_vendedor($nombre, $apellido, $email, $password)  == true) {
                             echo "<p style='color:green;'>Se ha registrado correctamente</p>";
-                            header('refresh: 1; url=../dise/accion.php');
+                            header('refresh: 1; url=../../dise/accion.php');
                         }
                     } else if (($_POST['rol']) == "2") {
                         if (agregar_comprador($nombre, $apellido, $email, $password)  == true) {
                             echo "<p style='color:green;'>Se ha registrado correctamente</p>";
-                            header('refresh: 1; url=../dise/accion.php');
+                            header('refresh: 1; url=../../dise/accion.php');
                         }
                     }
                 }
-            }
+            }        
+
         }
     }
     ?>
-    <br> <a href="../dise/accion.php">Regresar</a> <br>
+        <br> <a href="../../dise/accion.php">Regresar</a> <br>
 </body>
 
 </html

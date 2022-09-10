@@ -18,8 +18,8 @@
 
     <?php
     ob_start();
-    require_once("../dato/conexion.php");
-    require_once("miapp.php");
+    require_once("../../dato/conexion.php");
+    require_once("miapp_user.php");
 
     $consulta = mysqli_query($con, "SELECT * FROM usuario") or die(mysqli_error($con));
 
@@ -27,11 +27,11 @@
 
     <table width="40%" border="1">
         <tr>
-            <td>Id</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Email</td>
-            <td>Accion</td>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Accion</th>
         </tr>
         <?php
 
@@ -88,17 +88,16 @@
 
 
         if (isset($_POST['eliminar']))
-                echo "anashe";
-             else {
-                echo "f";
-            
+        if (eliminar($email)  == true) {
+            echo "<p style='color:green;'>Se ha eliminado correctamente</p>";
+            header('refresh: 1; url=../../dise/accion.php');
         }
 
 
         ?>
     </table>
     <br />
-    <a href="accion.php">Regresar</a>
+    <br> <a href="../../dise/accion.php">Regresar</a> <br>
 
     <head>
         <meta charset="UTF-8">

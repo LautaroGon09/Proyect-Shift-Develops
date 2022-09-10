@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Index</title>
+    <title>Seguridad Viera</title>
 </head>
 
 <body>
     <form method="post" action="">
-    <a href="../negocio/registrarse.php">Registrarse</a>
+    <a href="../negocio/usuario/registrarse.php">Registrarse</a>
 
-<a href="../negocio/login.php">Ingresar</a>
+<a href="../negocio/usuario/login.php">Ingresar</a>
     </form>
 
     </form>

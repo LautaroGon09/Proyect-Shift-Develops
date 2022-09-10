@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="" >
+<body class=" c" >
 
   <header class="px-3  py-auto   lg:p-auto lg:m-auto h-24 rounded bg-teal-800 md:flex   md:justify-between ">
 
@@ -43,7 +43,7 @@
       </li>
 
       <li class="mx-1   text-center  my-5 md:my-0">
-        <a href="segunda_ent/negocio/login.php" class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
+        <a href="./segunda_ent/dise/loginSigin.php" class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
                           px-2 hover:bg-cyan-500 rounded ">iniciar sesion ></a>
       </li>
    

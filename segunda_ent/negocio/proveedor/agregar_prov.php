@@ -14,49 +14,52 @@
 
         <br> <input placeholder="Direccion" type="text" name="dir" maxlength="30" size="40"> <br>
 
+        <br> <input placeholder="Telefono" type="number" name="tel" maxlength="30" size="40"> <br>
+
         <br>
         <br> <input type="submit" value="Agregar Proveedor" name="agregar"> <br>
 
     </form>
 
     <?php
-    require_once("miapp.php");
+    require_once("miapp_prov.php");
     if (isset($_POST['agregar'])) {
 
-        if (isset($_POST['mail'])  && isset($_POST['dir'])) {
+        if (isset($_POST['mail'])  && isset($_POST['dir'])  && isset($_POST['tel'])) {
 
 
             if (empty($_POST['mail'])) {
                 echo "<p style='color:red;'>Es necesario agregar un  email </p>";
-                header('refresh: 1; ');
             }
             if (empty($_POST['dir'])) {
                 echo "<p style='color:red;'>Es necesario agregar una direccion </p>";
-                header('refresh: 1; ');
+            }
+            if (empty($_POST['tel'])) {
+                echo "<p style='color:red;'>Es necesario agregar un telefono </p>";
             }
 
 
-
-            if (empty($_POST['mail']) || empty($_POST['dir'])) {
+            if (empty($_POST['mail']) || empty($_POST['dir']) || empty($_POST['tel'])) {
 
                 return;
             }
 
             $email = $_POST['mail'];
             $direccion = $_POST['dir'];
+            $telefono = $_POST['tel'];
 
             if (existe_prov($email) == true) {
                 echo "<p style='color:red;'>Email ya existente, ingrese otro email</p>";
             } else {
-                if (agregar_prov($email, $direccion)  == true) {
+                if (agregar_prov($email, $direccion,$telefono)  == true) {
                     echo "<p style='color:green;'>Se ha registrado correctamente</p>";
-                    header('refresh: 1; url=../dise/accion.php');
+                    header('refresh: 1; url=../../dise/accion.php');
                 }
             }
         }
     }
     ?>
-    <br> <a href="../dise/accion.php">Regresar</a> <br>
+        <br> <a href="../../dise/accion.php">Regresar</a> <br>
 </body>
 
 </html

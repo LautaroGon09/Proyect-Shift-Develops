@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Cliente</title>
+    <title>Seguridad Viera</title>
 </head>
 
 <body>

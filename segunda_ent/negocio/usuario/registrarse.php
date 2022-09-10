@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../../src/estilos.css">
+    <link rel="stylesheet" href="./src/estilos.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="mx-4" >
+<body class=" c" >
 
   <header class="px-3  py-auto   lg:p-auto lg:m-auto h-24 rounded bg-teal-800 md:flex   md:justify-between ">
 
     <div class="flex justify-between items-center pl-0 lg:pl-20">
       <span class="text-base md:text-lg lg:text-2xl font-Bold">
-        <img class="h-20 inline" src="imgs/Logo.png" alt="">
+        <img class="h-20 inline" src="./src/imgs/Logo.png" alt="">
         Ropa de seguridad Viera
       </span>
 
@@ -39,11 +40,11 @@
       </li >
 
       <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-        <a href="../segunda_ent/negocio/login.php" class="text-lg hover:text-cyan-300 duration-200">Nosotros</a>
+        <a href="" class="text-lg hover:text-cyan-300 duration-200">Nosotros</a>
       </li>
 
       <li class="mx-1   text-center  my-5 md:my-0">
-        <a href="segunda_ent/negocio/login.php" class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
+        <a href="./segunda_ent/dise/loginSigin.php" class="bg-cyan-500 inline text-white font-semibold duration-500  py-1
                           px-2 hover:bg-cyan-500 rounded ">iniciar sesion ></a>
       </li>
    
@@ -54,14 +55,14 @@
   <nav class="mt-2">
           <div class="  flex justify-center" id="menuCategorias">
             <ul class="flex w-auto items-center bg-slate-800 rounded">
-              <li><a href=""><img class="h-12 px-10" src="imgs/casco.png" alt=""></a></li>
-              <li><a href=""><img class="h-12 px-5" src="imgs/Chaleco.png" alt=""></a></li>        
-              <li><a href=""><img class="h-12 px-5" src="imgs/Uniforme.png" alt=""></a></li>
+              <li><a href=""><img class="h-12 px-10" src="./src/imgs/casco.png" alt=""></a></li>
+              <li><a href=""><img class="h-12 px-5" src="./src/imgs/Chaleco.png" alt=""></a></li>        
+              <li><a href=""><img class="h-12 px-5" src="./src/imgs/uniforme.png" alt=""></a></li>
               <li><input class="h-6" type="text"></li>
-              <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>
-              <li><a href=""><img class="h-12 px-5" src="imgs/Ofertas.png" alt=""></a></li>        
-              <li><a href=""><img class="h-12 px-5" src="imgs/Combos.png" alt=""></a></li>
-              <li><a href=""><img class="h-12 px-5" src="imgs/Botas.png" alt=""></a></li>
+              <li><img class="h-6 p-1 border"src="./src/imgs/casco.png" alt=""></li>
+              <li><a href=""><img class="h-12 px-5" src="./src/imgs/Botas.png" alt=""></a></li>        
+              <li><a href=""><img class="h-12 px-5" src="./src/imgs/Ofertas.png" alt=""></a></li>
+              <li><a href=""><img class="h-12 px-5" src="./src/imgs/Combos.png" alt=""></a></li>
             </ul>
           </div>
   
@@ -86,10 +87,7 @@
     </div>
       
       
-    <div class="Contenido border-b border-red-900 py-5 mr-5 w-full flex h-screen">
-
-    <?php include("prueba.php")?>
-
+    <div class="Contenido border-b border-red-900  py-5 mr-5 w-full flex h-screen">
       
          
 
@@ -106,7 +104,7 @@
     <div class="grid  w-full bg-teal-900">
 
       <div class="flex  justify-center  items-center">
-        <img class="h-20  md:h-28 inline  " src="imgs/Logo.png" alt="">
+        <img class="h-20  md:h-28 inline  " src="./src/imgs/Logo.png"  alt="">
         <span class="font-semibold text-xl md:text-2xl  text-white ">
           Ropa de Seguridad
         </span>
@@ -137,9 +135,9 @@
             Redes 
           </h4>
             <ul class="mt-auto flex    hover:text-white">
-              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src=".src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src=".src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-1 mb-1" src=".src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
             </ul>
         </div>
           
@@ -174,20 +172,7 @@
 <!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->
 
 
-   
-   
-   
-
-   
-   
-   
-   
-   
-
-    
- 
-    
 
 
 
-    
+

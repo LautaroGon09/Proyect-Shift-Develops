@@ -1,7 +1,11 @@
 <?php
+$nom = null;
+$ape = null;
+$mail = null;
+$tel = null;
 ob_start();
-require_once("../dato/conexion.php");
-require_once("miapp.php");
+require_once("../../dato/conexion.php");
+require_once("miapp_user.php");
 $ID = $_GET["ID"];
 
 $consultas = mysqli_query($con, "SELECT * FROM usuario WHERE IdUsuario='" . $ID . "'") or die(mysqli_error($con));
@@ -12,11 +16,16 @@ while ($filax = mysqli_fetch_array($consultas)) {
     $pass = $filax['Contraseña'];
     $mail = $filax['Email'];
 }
+$cons = mysqli_query($con, "SELECT * FROM telusr WHERE IdUsuario='" . $ID . "'") or die(mysqli_error($con));
+
+while ($filam = mysqli_fetch_array($cons)) {
+    $tel = $filam['Telefono'];
+}
 if (isset($_POST['modificar'])) {
 
-    if (isset($_POST['nom2'])  && isset($_POST['ape2']) && isset($_POST['mail2'])  && isset($_POST['pass'])) {
+    if (isset($_POST['nom2'])  && isset($_POST['ape2']) && isset($_POST['mail2'])  && isset($_POST['pass']) && isset($_POST['tel2'])) {
 
-        $patron = '/[1-9]/';
+        $patron = '/[0-9]/';
 
         if (preg_match("$patron", ($_POST['nom2']))) {
             echo "<p style='color:red;'>Solo letras en el nombre </p>";
@@ -43,7 +52,11 @@ if (isset($_POST['modificar'])) {
             echo "<p style='color:red;'>Es necesario agregar una contraseña </p>";
             header('refresh: 2; ');
         }
-        if (empty($_POST['nom2']) || empty($_POST['ape2']) || empty($_POST['mail2']) || empty($_POST['pass'])) {
+        if (empty($_POST['tel2'])) {
+            echo "<p style='color:red;'>Es necesario agregar un telefono </p>";
+            header('refresh: 2; ');
+        }
+        if (empty($_POST['nom2']) || empty($_POST['ape2']) || empty($_POST['mail2']) || empty($_POST['pass']) || empty($_POST['tel2'])) {
 
             return;
         }
@@ -53,13 +66,10 @@ if (isset($_POST['modificar'])) {
         $ape2 = $_POST['ape2'];
         $pass = $_POST['pass'];
         $mail2 = $_POST['mail2'];
-        if (existe($mail2) == true) {
-            echo "<p style='color:red;'>Email ya existente, ingrese otro email</p>";
-            header('refresh: 2; ');
-
-        } else if (actualizar($nom2, $ape2, $pass, $mail2, $ID)  == true) {
+        $tel2 = $_POST['tel2'];
+        if (actualizar($nom2, $ape2, $pass, $mail2, $tel2, $ID)  == true) {
             echo "<p style='color:green;'>Se ha actualizado correctamente</p>";
-            header('refresh: 1; url=../dise/accion.php');
+            header('refresh: 1; url=../../dise/accion.php');
         }
     }
 }
@@ -76,6 +86,9 @@ if (isset($_POST['modificar'])) {
     <input placeholder="Ingrese nueva contraseña" value="" type="password" name="pass" maxlength="30" size="40">
 
     <input placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" maxlength="30" size="40">
+
+    <input placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" maxlength="30" size="40">
+
 
     <input type="submit" value="Modificar" name="modificar">
 
