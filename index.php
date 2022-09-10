@@ -86,9 +86,9 @@
     </div>
       
       
-    <div class="Contenido border-b  py-5 mr-5 w-full flex h-screen">
+    <div class="Contenido border-b border-red-900 py-5 mr-5 w-full flex h-screen">
       
-         
+      <php?>
 
     
     </div>
