@@ -11,7 +11,7 @@
 </head>
 <body class="mx-10" >
 
-  <header class="px-3     lg:p-auto lg:m-auto h-20 rounded bg-teal-800 md:flex  md:items-center md:justify-between ">
+  <header class="px-3     lg:p-auto lg:m-auto h-20 rounded bg-teal-800 md:flex  md:items-center md:justify-between "> 
 
     <div class="flex justify-between items-center pl-0 lg:pl-20">
       <span class="text-xl md:text-2xl  font-Bold">
@@ -132,7 +132,7 @@
       
               <input placeholder="Contraseña" type="password" name="pass" maxlength="30" class="rounded my-3">
               <input type="submit" value="Ingresar" name="ingresar" class="rounded   m-1 border text-base border-white">
-       <?php include("./funclogin.php")?>
+              <?php include("./funclogin.php")?>
               
       
           </form>
