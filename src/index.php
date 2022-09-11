@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../../src/estilos.css">
+    <link rel="stylesheet" href="./src/estilos.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -39,10 +39,10 @@
           </li>
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <button class="bg-cyan-500  text-white font-semibold duration-500 px-4 py-1
+            <a href="./segunda_ent/dise/loginSigin.php" class="bg-cyan-500  text-white font-semibold duration-500 px-4 py-1
                 mx-3 hover:bg-cyan-500 rounded ">
               iniciar sesion
-            </button>
+            </a>
           </li>
           
 
@@ -119,19 +119,54 @@
        
       </div>
       
-      <div class="Contenido border-b border-red-500 py-5 mr-5  h-screen w-full">
+      <div class="Contenido border-b border-red-900 py-5 mr-5 flex h-screen w-auto">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 place-items-center 
+        py-5    flex-grow rounded ">
 
-        <div class="  flex flex-col ">
-          <h2 class="text-lg mx-auto pb-20">Cuenta</h2>
-          <div class="flex flex-col p-10 h-auto m-auto p-auto rounded bg-slate-400">
-            
-          <a href="../negocio/usuario/login.php" class="my-3 bg-red-900 w-auto text-center p-3 rounded">Ingresar</a>
-          <a href="" class="my-3 bg-red-900 w-auto text-center p-3 rounded">Registrarse</a>
 
-          </div>
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
 
         </div>
-        
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+        <div class="  h-64 w-48 bg-slate-900 mb-5 rounded">
+
+        </div>
+
+
+
+
+
+
+
+</div>
+       
+
       </div>
 
     </div>
@@ -214,3 +249,5 @@
 
 
 <!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->
+
+      <h2 class="text-2xl flex  mx-auto ">Cuenta</h2> 

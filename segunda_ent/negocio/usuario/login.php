@@ -7,45 +7,42 @@
     <title>Seguridad Viera</title>
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body class="mx-4" >
+<body class="mx-10" >
 
-  <header class="px-3     lg:p-auto lg:m-auto h-24 rounded bg-teal-800 md:flex  md:items-center md:justify-between ">
+  <header class="px-3     lg:p-auto lg:m-auto h-20 rounded bg-teal-800 md:flex  md:items-center md:justify-between ">
 
     <div class="flex justify-between items-center pl-0 lg:pl-20">
-      <span class="text-xl md:text-2xl lg:text-3xl font-Bold">
-        <img class="h-24 inline" src="imgs/Logo.png" alt="">
+      <span class="text-xl md:text-2xl  font-Bold">
+        <img class="h-16 inline" src="imgs/Logo.png" alt="">
         Ropa de seguridad Viera
       </span>
 
-      <span class=" text-3xl cursor-pointer mx-2 md:hidden block">
+      <!-- <span class=" text-3xl cursor-pointer mx-2 md:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"> </ion-icon>
-      </span>
+      </span> -->
     </div>
     
 
-       <ul class="  md:flex md:itemes-center  z-[1] md:z-auto md:static absolute
-             bg-teal-600 md:bg-teal-800 w-80 left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-6
-            md:opacity-100 opacity-0 o md:left-[-400px] transition-all ease-in
-            duration-500 pr-0 lg:pr-10">
+       <ul class="flex items-center justify-center"  >
           <li class="mx-1 ml-5  lg:mx-3 text-center  my-5 md:my-0"> 
-           <a href="#" class="text-xl text-center  hover:text-cyan-300 duration-200">Inicio</a>
+           <a href="#" class="text-lg text-center  hover:text-cyan-300 duration-200">Inicio</a>
           </li>
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="#" class="text-xl  hover:text-cyan-300 duration-200">Contacto</a>
+            <a href="#" class="text-lg  hover:text-cyan-300 duration-200">Contacto</a>
           </li >
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="#" class="text-xl  hover:text-cyan-300 duration-200">Nosotros</a>
+            <a href="#" class="textlg  hover:text-cyan-300 duration-200">Nosotros</a>
           </li>
 
           <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="./segunda_ent/dise/loginSigin.php" class="bg-cyan-500  text-white font-semibold duration-500 px-6 py-2
+            <button class="bg-cyan-500  text-white font-semibold duration-500 px-4 py-1
                 mx-3 hover:bg-cyan-500 rounded ">
               iniciar sesion
-            </a>
+            </button>
           </li>
           
 
@@ -58,19 +55,21 @@
 
 
   <div x-data="{ open: false }">
-    <button class="hidden" @click="open = true"><ion-icon name="menu"> </ion-icon></button>
+    <button class="flex md:hidden" @click="open = true"><ion-icon name="menu"> </ion-icon></button>
     <span >
       <nav class="mt-2">
-        <div class="  flex justify-center" id="menuCategorias">
-          <ul x-show="open" class=" hidden md:flex w-auto items-center bg-slate-800 rounded">
-            <li><a href=""><img class="h-12 px-10" src="imgs/casco.png" alt=""></a></li>
-            <li><a href=""><img class="h-12 px-5" src="imgs/Chaleco.png" alt=""></a></li>        
-            <li><a href=""><img class="h-12 px-5" src="imgs/Uniforme.png" alt=""></a></li>
+        <div class="  flex justify-center  id="menuCategorias">
+          <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
+            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/casco.png" alt=""><p class="flex text-white justify-center">Cascos</p></a></li>
+            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Chaleco.png" alt=""><p class="flex text-white justify-center">Chalecos</p></a></li>
+            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Uniforme.png" alt=""><p class="flex text-white justify-center">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>
-            <li><a href=""><img class="h-14 px-5" src="imgs/Ofertas.png" alt=""></a></li>        
-            <li><a href=""><img class="h-12 px-5" src="imgs/Combos.png" alt=""></a></li>
-            <li><a href=""><img class="h-12 px-5" src="imgs/Botas.png" alt=""></a></li>
+            <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>            
+            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Combos.png" alt=""><p class="flex text-white justify-center">Combos</p></a></li>
+            <li><a href=""><img class="h-14 px-5 m-2 mt-2" src="imgs/Ofertas.png" alt=""><p class="flex text-white justify-center">Ofertas</p></a></li>
+            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Botas.png" alt=""><p class="flex text-white justify-center">Botas</p></a></li>
+
+
           </ul>
         </div>
       </span>
@@ -120,34 +119,28 @@
        
       </div>
       
-        <div class="Contenido flex flex-col border-b border-red-900 py-5 mr-5  items-center flex w-full h-screen ">
+      <div class="Contenido border-b border-red-500 py-5 mr-5  h-screen w-full">
 
-            <div clas="flex bg-red-900">
-              <h2 class="text-2xl flex  mx-auto ">Cuenta</h2>  
-            </div>
+        <div class="  flex flex-col ">
+          <h2 class="text-xl font-bold mx-auto pb-20 w-full text-center border-b border-2 border-gray-300">Cuenta</h2>
+          <div class="flex flex-col p-10 h-auto m-auto p-auto rounded bg-slate-400">
             
-            <div class=" flex ">
-                <form class="topBefore mt-20 flex flex-col items-center justify-center
-                     bg-teal-900 rounded mt-10 p" 
-                    name="formulario" id="form" method="post"  action="">
+            <form name="formulario" method="post" action="" class="flex flex-col w-auto">
+              <p class="text-md">Iniciar Sesión</p>
 
-                    <input class="w-20 " placeholder="Email" type="email" id="name" name="mail" maxlength="30">
+              <input placeholder="Email" type="email" name="mail" maxlength="30" class=" rounded my-3">
+      
+              <input placeholder="Contraseña" type="password" name="pass" maxlength="30" class="rounded my-3">
+              <input type="submit" value="Ingresar" name="ingresar" class="rounded   m-1 border text-base border-white">
+       <?php include("./funclogin.php")?>
+              
+      
+          </form>
+          </div>
+         
 
-                    <input class="w-20 " placeholder="Contraseña" id="email" type="password" name="pass" >
-
-                    <?php include("funcionlogin.php") ?>
-
-                    <input class="w-20" type="submit" id="submit" value="Ingresar" name="ingresar">
-    
-                </form>
-            </div>
-            
-            
         </div>
-
-
-       
-
+        
       </div>
 
     </div>
@@ -155,59 +148,67 @@
    
   
     <footer class="flex h-auto ">
-      
+      <div class="flex flex-col w-full bg-teal-900 rounded">
 
-        <div class=" md:pl-0 grid grid-cols-1 md:grid-cols-3    w-full bg-teal-900">
+        <div class="contFoot   ">
+          <div class=" md:pl-0 grid grid-cols-1 md:grid-cols-3    w-full ">
 
-          <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
-            <!-- quiero que no se achique -->
-            <img class="h-28  lg:h-32 inline  " src="imgs/Logo.png" alt="">
-            <span class="font-semibold  text-2xl text-white tracking-tight">
-              Ropa de Seguridad
-            </span>
-          </div>
-
-          <div class="mb-5   sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
-            <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-              Cuenta
-            </h4> 
-            <a href="" class=" text-teal-300 hover:text-white">Mi cuenta</a> <br>
-            <a href="" class=" text-teal-300 hover:text-white">Favoritos</a> <br>
-            <a href="" class=" text-teal-300 hover:text-white">Carrito</a>  <br>
-            <a href="" class=" text-teal-300 hover:text-white">Cerrar/Iniciar Sesión</a>
-          </div>
-
-          <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
-            <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-              Empresa
-            </h4>
-            <a href="" class=" text-teal-300 hover:text-white">Envios</a> <br>
-            <a href="" class=" text-teal-300 hover:text-white">Metodos de pago</a>  <br>
-            <a href="" class=" text-teal-300 hover:text-white">Politicas de garantía</a> 
-          </div>
-           
-          <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44  ">
-            <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-              Redes y contactos
-              </h4>
-              <ul class="mt-auto flex justify-center hover:text-white">
-    
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-      
-              </ul>
+            <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
+              <!-- quiero que no se achique -->
+              <img class="h-28  lg:h-32 inline  " src="imgs/Logo.png" alt="">
+              <span class="font-semibold  text-2xl text-white tracking-tight">
+                Ropa de Seguridad
+              </span>
             </div>
-
-            
-                     
+  
+            <div class="mb-5   sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
+              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
+                Cuenta
+              </h4> 
+              <a href="" class=" text-teal-300 hover:text-white">Mi cuenta</a> <br>
+              <a href="" class=" text-teal-300 hover:text-white">Favoritos</a> <br>
+              <a href="" class=" text-teal-300 hover:text-white">Carrito</a>  <br>
+              <a href="" class=" text-teal-300 hover:text-white">Cerrar/Iniciar Sesión</a>
+            </div>
+  
+            <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
+              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
+                Empresa
+              </h4>
+              <a href="" class=" text-teal-300 hover:text-white">Envios</a> <br>
+              <a href="" class=" text-teal-300 hover:text-white">Metodos de pago</a>  <br>
+              <a href="" class=" text-teal-300 hover:text-white">Politicas de garantía</a> 
+            </div>
+             
+            <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44  ">
+              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
+                Redes y contactos
+                </h4>
+                <ul class="mt-auto flex justify-center hover:text-white">
+      
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+        
+                </ul>
+              </div>
+  
+              
+                       
+          </div>
+          <div class="w-full h-5 ">
+            &copy; Hello
+         </div>
         </div>
 
+
+
+      </div>
+
+       
+      
     </footer>
-    <div class="w-full h-5 bg-teal-500 items-center flex">
-      &copy; Hello
-        
-    </div>
+   
 
  
  
@@ -230,23 +231,3 @@
 
 
 <!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
- <!--  <link rel="stylesheet" href="login.css"> -->
- <link rel="stylesheet" href="../../../src/estilos.css">

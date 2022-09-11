@@ -1,4 +1,3 @@
-
 <?php
 require_once("miapp_user.php");
 if (isset($_POST['ingresar'])) {
