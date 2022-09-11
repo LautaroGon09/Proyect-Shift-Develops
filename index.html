@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./src/estilos.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -14,7 +14,7 @@
   <header class="flex items-center  flex-wrap bg-teal-900 rounded ">
 
     <div class="flex items-center flex-shrink-0 text-white mx-10 ">
-      <img class="h-14 inline" src="imgs/Logo.png" alt="">
+      <img class="h-14 inline" src="./src/imgs/Logo.png" alt="">
       <span class="text-base sm:text-lg md:tex-2xl  font-semibold"> Ropa de seguridad Viera</span>
 
     </div>
@@ -30,16 +30,16 @@
     <div id="menu" class="w-full block flex-grow md:flex md:items-center md:w-auto text-end mr-10">
       <div  class="text-md md:flex-grow text-center items-cenetr  md:text-end justify-center ">
 
-        <a href="#responsive-header" class="block w-full mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4">
+        <a href="#responsive-header" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4">
           Inicio
         </a>
-        <a href="#responsive-header" class="block w-full mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4">
+        <a href="#responsive-header" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4">
           Contacto
         </a>
-        <a href="#responsive-header" class="block w-full mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white">
+        <a href="#responsive-header" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white">
           Nosotros
         </a>
-        <a href="#responsive-header" class="block w-full mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white">
+        <a href="#responsive-header" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white">
           iniciar sesion
         </a>  
       </div>
@@ -53,18 +53,18 @@
   </header>
 
 
-  <div x-data="{ open: false }" class="flex flex-shrink justify-center">
+  <div  class="flex flex-shrink justify-center">
       <nav class="mt-2">
         <div class="flex justify-center ">
-          <ul x-show="open" class="flex  items-center bg-slate-800 rounded">
-            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="imgs/casco.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Cascos</p></a></li>
-            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="imgs/Chaleco.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Chalecos</p></a></li>
-            <li><a href=""><img class="h-6 sm:h-8   px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="imgs/Uniforme.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Uniformes</p></a></li>
+          <ul  class="flex  items-center bg-slate-800 rounded">
+            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="./src/imgs/casco.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Cascos</p></a></li>
+            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="./src/imgs/Chaleco.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Chalecos</p></a></li>
+            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="./src/imgs/Uniforme.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Uniformes</p></a></li>
             <li><input class="h-6 w-24 sm:w-32 md:w-auto" type="text"></li>
-            <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>            
-            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="imgs/Combos.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Combos</p></a></li>
-            <li><a href=""><img class="h-7 sm:h-9 px-3 m-1 mt-1 md:h-14 md:px-5 md:m-2 md:mt-2" src="imgs/Ofertas.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Ofertas</p></a></li>
-            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="imgs/Botas.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Botas</p></a></li>
+            <li><img class="h-6 p-1 border"src="./src/imgs/Lupa2.png" alt=""></li>            
+            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="./src/imgs/Combos.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Combos</p></a></li>
+            <li><a href=""><img class="h-7 sm:h-9 px-3 m-1 mt-1 md:h-14 md:px-5 md:m-2 md:mt-2" src="./src/imgs/Ofertas.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Ofertas</p></a></li>
+            <li><a href=""><img class="h-6 sm:h-8 px-3 m-1 mt-1 md:h-12 md:px-5 md:m-2 md:mt-2" src="./src/imgs/Botas.png" alt=""><p class="flex text-sm md:text-lg text-white justify-center">Botas</p></a></li>
 
 
           </ul>
@@ -150,7 +150,7 @@
 
             <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
               <!-- quiero que no se achique -->
-              <img class="h-28  lg:h-32 inline  " src="imgs/Logo.png" alt="">
+              <img class="h-28  lg:h-32 inline  " src="./src/imgs/Logo.png" alt="">
               <span class="font-semibold  text-2xl text-white tracking-tight">
                 Ropa de Seguridad
               </span>
@@ -181,9 +181,9 @@
                 </h4>
                 <ul class="mt-auto flex justify-center hover:text-white">
       
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
         
                 </ul>
               </div>
@@ -191,8 +191,8 @@
               
                        
           </div>
-          <div class="w-full h-5 ">
-            &copy; Hello
+          <div class="w-full h-5 my-1 ">
+            &copy; Copyrigth
          </div>
         </div>
 
@@ -211,8 +211,8 @@
 
   
   
-    <script src="app.js"></script>
-    <script src="jquer.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/jquer.js"></script>
 </body>
 </html>
 

@@ -122,7 +122,7 @@
       <div class="Contenido border-b border-red-500 py-5 mr-5  h-screen w-full">
 
         <div class="  flex flex-col ">
-          <h2 class="text-xl font-bold mx-auto pb-20 w-full text-center border-b border-2 border-gray-300">Cuenta</h2>
+          <h2 class="text-xl font-bold mx-auto pb-20 w-full text-center border-b border-gray-300">Cuenta</h2>
           <div class="flex flex-col p-10 h-auto m-auto p-auto rounded bg-slate-400">
             
             <form name="formulario" method="post" action="" class="flex flex-col w-auto">
