@@ -15,7 +15,7 @@
   <header class="flex items-center  flex-wrap bg-teal-900 rounded ">
 
     <div class="flex items-center flex-shrink-0 text-white mx-10 ">
-      <img class="h-14 inline" src="./src/imgs/Logo.png" alt="">
+      <img class="h-14 inline" src="imgs/Logo.png" alt="">
       <span class="text-base sm:text-lg md:tex-2xl  font-semibold"> Ropa de seguridad Viera</span>
 
     </div>
@@ -28,7 +28,7 @@
       </button>
 
     </div>
-    <div id="menu" class="w-full  hidden flex-grow md:flex md:items-center md:w-auto text-end mr-10">
+    <div id="menu" class="w-full hidden flex-grow md:flex md:items-center md:w-auto text-end mr-10">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center ">
 
         <a href="#responsive-header" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4">
@@ -66,16 +66,73 @@
     
     
     <div class="flex mb-10">
-      <div class="sidebar mt-5 fixen bottom-0 lg:left-0 p-2 w-[300px]
-                   overflow-y-auto text-center bg-slate-800  ">
+     
+      
+      <!--  <div  class=" my-auto fixed left-[-300px] lg:left-0 
+                     p w-[300px] 
+                   overflow-y-auto text-center bg-slate-800 rounded h-auto">
+            <span class="absolute  text-white text-4xl pt-2 left-4 cursor-pointer md:hidden" >
+              <i class="bi bi-filter-left px-2  left-4 cursor-pointer rounded-md"></i>
+            </span>       
         <div class="text-gray-100  text-xl">
           <div class="p-2.5 mt-1 flex items-center">
-            <i class="bi bi-x-lg ml-40 cursor-pointer"></i>
-          </div>
- 
+          </div> 
+        </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer bg-gray-700 text-white">
+          <i class="bi bi-search font-bold text-sm md:hidden" ></i>        
+          <input type="text" class="text-[15px] ml-4 w-full bg-transparent
+              focus:outline-none" placeholder="Buscar...">    
+        </div>
+        
+        <div class="p-2.5 mt-3 flex items-center justify-between rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white" onclick="dropdown()">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/casco.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Cascos</p>
+                  <span class="text-sm rotate-180 m-auto p-auto" id="arrow">
+                     <i class="bi bi-chevron-down"></i>    
+
+                  </span>
+        </div>
+        <div class=" text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200" id="submenu">
+         <h3 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Cascos</h3>
+         <h3 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Cascos</h3>
+         <h3 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Cascos</h3>
         </div>
 
-      </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/Chaleco.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Chalecos</p>        
+             
+        </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/Uniforme.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Uniformes</p>        
+
+        </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/Botas.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
+                  
+        </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/Ofertas.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Ofertas</p>        
+                  
+        </div>
+        <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                    cursor-pointer hover:bg-blue-700 text-white">
+                    <a href=""><img class="h-6 m-2 p-auto inline" src="imgs/Combos.png" alt=""></a>  
+                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Combos</p>        
+                  
+        </div>
+         
+
+      </div> -->
 
 
 
@@ -146,7 +203,7 @@
 
             <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
               <!-- quiero que no se achique -->
-              <img class="h-28  lg:h-32 inline  " src="./src/imgs/Logo.png" alt="">
+              <img class="h-28  lg:h-32 inline  " src="/imgs/Logo.png" alt="">
               <span class="font-semibold  text-2xl text-white tracking-tight">
                 Ropa de Seguridad
               </span>
@@ -177,9 +234,9 @@
                 </h4>
                 <ul class="mt-auto flex justify-center hover:text-white">
       
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="./src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="/imgs/Instagram_logo_2022.svg" alt=""></a></li>
         
                 </ul>
               </div>
@@ -207,8 +264,19 @@
 
   
   
-    <script src="./src/app.js"></script>
-    <script src="./src/jquer.js"></script>
+    <script src="app.js"></script>
+    <script src="jquer.js"></script>
+    <script>
+      function dropDown() {
+        document.querySelector('#submenu').classList.toggle('hidden')
+        document.querySelector('#arrow').classList.toggle('rotate-0')
+      }
+      dropDown()
+  
+      function Openbar() {
+        document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+      }
+    </script>
 </body>
 </html>
 
