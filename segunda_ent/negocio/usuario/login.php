@@ -6,228 +6,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
     <link rel="stylesheet" href="../../../src/estilos.css">
+    <link rel="stylesheet" href="index.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" type="imgs" href="./imgs/favicon.png.png">
 </head>
-<body class="mx-10" >
-
-  <header class="px-3     lg:p-auto lg:m-auto h-20 rounded bg-teal-800 md:flex  md:items-center md:justify-between "> 
-
-    <div class="flex justify-between items-center pl-0 lg:pl-20">
-      <span class="text-xl md:text-2xl  font-Bold">
-        <img class="h-16 inline" src="imgs/Logo.png" alt="">
-        Ropa de seguridad Viera
-      </span>
-
-      <!-- <span class=" text-3xl cursor-pointer mx-2 md:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"> </ion-icon>
-      </span> -->
-    </div>
-    
-
-       <ul class="flex items-center justify-center"  >
-          <li class="mx-1 ml-5  lg:mx-3 text-center  my-5 md:my-0"> 
-           <a href="#" class="text-lg text-center  hover:text-cyan-300 duration-200">Inicio</a>
-          </li>
-
-          <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="#" class="text-lg  hover:text-cyan-300 duration-200">Contacto</a>
-          </li >
-
-          <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <a href="#" class="textlg  hover:text-cyan-300 duration-200">Nosotros</a>
-          </li>
-
-          <li class="mx-1  lg:mx-3 text-center  my-5 md:my-0">
-            <button class="bg-cyan-500  text-white font-semibold duration-500 px-4 py-1
-                mx-3 hover:bg-cyan-500 rounded ">
-              iniciar sesion
-            </button>
-          </li>
-          
-
-   
-        </ul>
-      
-   
-    
-  </header>
+<body class="" >
 
 
-  <div x-data="{ open: false }">
-    <button class="flex md:hidden" @click="open = true"><ion-icon name="menu"> </ion-icon></button>
-    <span >
-      <nav class="mt-2">
-        <div class="  flex justify-center  id="menuCategorias">
-          <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
-            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/casco.png" alt=""><p class="flex text-white justify-center">Cascos</p></a></li>
-            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Chaleco.png" alt=""><p class="flex text-white justify-center">Chalecos</p></a></li>
-            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Uniforme.png" alt=""><p class="flex text-white justify-center">Uniformes</p></a></li>
-            <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="imgs/Lupa2.png" alt=""></li>            
-            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Combos.png" alt=""><p class="flex text-white justify-center">Combos</p></a></li>
-            <li><a href=""><img class="h-14 px-5 m-2 mt-2" src="imgs/Ofertas.png" alt=""><p class="flex text-white justify-center">Ofertas</p></a></li>
-            <li><a href=""><img class="h-12 px-5 m-2 mt-2" src="imgs/Botas.png" alt=""><p class="flex text-white justify-center">Botas</p></a></li>
+  
 
+<header class="flex items-center justify-center flex-wrap bg-blue-900 rounded ">
 
-          </ul>
-        </div>
-      </span>
-   </nav> 
+<div class="flex items-center flex-shrink-0 text-white mx-10 ">
+  <img class="h-14 inline" src="../../../src/imgs/Logo.png" alt="">
+  <span class="text-base sm:text-lg md:tex-2xl  font-semibold"> Ropa de seguridad Viera</span>
+
+</div><link rel="stylesheet" href="">
+<div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
+  <button id='boton' class="flex  items-center  px-3 py-2 md:mr-5 border 
+  rounded text-white font-semibold border-whiteS hover:text-white
+   hover:border-white md:hidden">
+   <ion-icon name="menu"></ion-icon>
+  </button>
+
+</div>
+<div id="menu" class="w-full mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end mr-10">
+  <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
+
+    <a href="../../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4">
+      Inicio
+    </a>
+    <a href="../../../Pags/Contacto.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4">
+      Contacto
+    </a>
+    <a href="../../../Pags/Contacto.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:text-white">
+      Nosotros
+    </a>
+    <a href="../segunda_ent/negocio/usuario/login.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:text-white">
+      iniciar sesion
+    </a>  
   </div>
   
-  <!-- <div class="flex relative ml-3 flex-row-reverse">
-    <div>
-      <button type="button" class="felx  rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-        <span class="sr-only">Open user menu</span>
-        <ion-icon name="menu" onclick="Menu(this)"> </ion-icon>
+</div>
 
-      </button>
-    </div>
-
-    <div class="absolute   mt-8 w-auto origin-top-right rounded-md bg-red-900 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-     <ul class="flex flex-col justify-center py-5">
-      <li><a href=""><img class="h-10 my-2" src="imgs/casco.png" alt=""></a></li>
-      <li><a href=""><img class="h-10 my-2" src="imgs/Chaleco.png" alt=""></a></li>        
-      <li><a href=""><img class="h-10 my-2" src="imgs/Uniforme.png" alt=""></a></li>
-      <li><a href=""><img class="h-10 my-2" src="imgs/Ofertas.png" alt=""></a></li>        
-      <li><a href=""><img class="h-10 my-2" src="imgs/Combos.png" alt=""></a></li>
-      <li><a href=""><img class="h-10 my-2" src="imgs/Botas.png" alt=""></a></li>
-     </ul>
-    </div>
-  </div> -->
-
-
-
-
-
-
-    
-    
-    <div class="flex  my-10 ">
-
-      <div class=" mx-4 lg:mx-8 pr-5 lg:pr-14 border-r border-gray-400 flex-row">
-        <div class="flex flex-grow">
-          <ul class="flex-col text-center  mx-auto ">
-
-          <li class=" p-1 w-44 rounded-md mt-2  bg-buenas"><a href="">Categorias</a></li>
 
   
-          </ul>
-        </div>
-        
-       
+
+
+</header>
+
+
+  <nav class="mt-2 hidden md:flex md:justify-center">
+    <div class="  flex justify-center  id="menuCategorias">
+      <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
+        <li><a href="../Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center">Cascos</p></a></li>
+        <li><a href="../Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center">Chalecos</p></a></li>
+        <li><a href="../Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center">Uniformes</p></a></li>
+        <li><input class="h-6" type="text"></li>
+        <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
+        <li><a href="../Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center">Combos</p></a></li>
+        <li><a href="../Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center">Ofertas</p></a></li>
+        <li><a href=../Pags/Botas.php""><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center">Botas</p></a></li>
+
+
+      </ul>
+    </div>
+  </nav> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex mb-10">
+ 
+  
+  
+  <div  class=" flex-col md:hidden absolute my-3 lg:left-0 w-full mr-5
+               overflow-y-auto text-center bg-slate-800 rounded h-auto mb-10">
+    <button id="boton2" class=" flex my-3 m-auto">
+      <span class=" text-white text-4xl  left-4 cursor-pointer md:hidden" >
+        <i class="bi bi-filter-left px-2 left-4 cursor-pointer rounded-md"></i>
+      </span>
+    </button> 
+
+    <div id="menu2" class="flex-col">
+      <div class="text-gray-100  text-xl">
+        <div class="p-2.5  flex items-center">
+        </div> 
+      </div>
+      <div class="p-2.5 mt-3 flex items rounded-md px-4 duration-300
+                  cursor-pointer bg-gray-700 text-white">
+        <i class="bi bi-search font-bold text-sm " ></i>        
+        <input type="text" class="text-[15px] ml-4 w-full bg-transparent
+            focus:outline-none" placeholder="Buscar...">    
       </div>
       
-      <div class="Contenido border-b border-red-500 py-5 mr-5  h-screen w-full">
-
-        <div class="  flex flex-col ">
-          <h2 class="text-xl font-bold mx-auto pb-20 w-full text-center border-b border-gray-300">Cuenta</h2>
-          <div class="flex flex-col p-10 h-auto m-auto p-auto rounded bg-slate-400">
-            
-            <form name="formulario" method="post" action="" class="flex flex-col w-auto">
-              <p class="text-md">Iniciar Sesión</p>
-
-              <input placeholder="Email" type="email" name="mail" maxlength="30" class=" rounded my-3">
+      <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white" >
+                  <a href="../../../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
+                <span class="text-sm m-auto p-auto" id="arrow">
+                   <i class="bi bi-chevron-down"></i>    
+                </span>
+      </div>
       
-              <input placeholder="Contraseña" type="password" name="pass" maxlength="30" class="rounded my-3">
-              <input type="submit" value="Ingresar" name="ingresar" class="rounded   m-1 border text-base border-white">
-              <?php include("./funclogin.php")?>
-              
-      
-          </form>
-          </div>
-         
 
-        </div>
-        
+      <div class="p-2.5  flex items rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white">
+                  <a href="../../../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
+                  <span class="text-sm m-auto p-auto" id="arrow">
+                    <i class="bi bi-chevron-down"></i>    
+                 </span>
+      </div>
+      <div class="p-2.5  flex items rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white">
+                  <a href="../../../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
+                  <span class="text-sm m-auto p-auto" id="arrow">
+                    <i class="bi bi-chevron-down"></i>    
+                 </span>
+      </div>
+      <div class="p-2.5  flex items rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white">
+                  <a href="../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
+                  <span class="text-sm m-auto p-auto" id="arrow">
+                    <i class="bi bi-chevron-down"></i>    
+                 </span>
+      </div>
+      <div class="p-2.5  flex items rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white">
+                  <a href="../../../Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
+                  <span class="text-sm m-auto p-auto" id="arrow">
+                    <i class="bi bi-chevron-down"></i>    
+                 </span>
+      </div>
+      <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
+                  cursor-pointer hover:bg-blue-700 text-white">
+                  <a href="../../../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
+                  <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
+                  <span class="text-sm m-auto p-auto" id="arrow">
+                    <i class="bi bi-chevron-down"></i>    
+                 </span>
       </div>
 
-    </div>
-    
-   
-  
-    <footer class="flex h-auto ">
-      <div class="flex flex-col w-full bg-teal-900 rounded">
-
-        <div class="contFoot   ">
-          <div class=" md:pl-0 grid grid-cols-1 md:grid-cols-3    w-full ">
-
-            <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
-              <!-- quiero que no se achique -->
-              <img class="h-28  lg:h-32 inline  " src="imgs/Logo.png" alt="">
-              <span class="font-semibold  text-2xl text-white tracking-tight">
-                Ropa de Seguridad
-              </span>
-            </div>
-  
-            <div class="mb-5   sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
-              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-                Cuenta
-              </h4> 
-              <a href="" class=" text-teal-300 hover:text-white">Mi cuenta</a> <br>
-              <a href="" class=" text-teal-300 hover:text-white">Favoritos</a> <br>
-              <a href="" class=" text-teal-300 hover:text-white">Carrito</a>  <br>
-              <a href="" class=" text-teal-300 hover:text-white">Cerrar/Iniciar Sesión</a>
-            </div>
-  
-            <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
-              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-                Empresa
-              </h4>
-              <a href="" class=" text-teal-300 hover:text-white">Envios</a> <br>
-              <a href="" class=" text-teal-300 hover:text-white">Metodos de pago</a>  <br>
-              <a href="" class=" text-teal-300 hover:text-white">Politicas de garantía</a> 
-            </div>
+    </div>           
              
-            <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44  ">
-              <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-teal-400 border-b mr-3 hover:text-white">
-                Redes y contactos
-                </h4>
-                <ul class="mt-auto flex justify-center hover:text-white">
+
+  </div>
       
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="imgs/Instagram_logo_2022.svg" alt=""></a></li>
+    <div class="flex flex-col w-full mt-20">
+      <div class="flex h-screen flex-col">
         
-                </ul>
-              </div>
-  
-              
-                       
-          </div>
-          <div class="w-full h-5 ">
-            &copy; Hello
-         </div>
+        <form class="form" name="formulario" method="post" action="">
+          <h4>Iniciar Sesión</h4>
+            <input class="controls" placeholder="Email" type="email" required name="mail" maxlength="30" size="40">
+
+            <input class="controls" placeholder="Contraseña" type="password" required name="pass" maxlength="30" size="40">
+
+            <input class="botons" type="submit" value="Ingresar" name="ingresar">
+
+        </form>
+            <div class="flex flex-col mx-auto mt-20">
+            <?php include("funcLogin.php")?>
+            </div>
         </div>
-
-
-
+        
       </div>
 
-       
+  </div>
+
       
-    </footer>
-   
 
+    </div>
  
- 
+  </div>
 
 
+</div>
+
+
+
+<footer class="flex h-auto ">
+  <div class="flex flex-col w-full bg-blue-900 rounded">
+
+    <div class="contFoot   ">
+      <div class=" md:pl-0 grid grid-cols-1 md:grid-cols-3    w-full ">
+
+        <div class="flex col-span-1  sm:col-span-3   justify-center  items-center">
+          <!-- quiero que no se achique -->
+          <img class="h-28  lg:h-32 inline" src="../../../src/imgs/Logo.png" alt="">
+          <span class="font-semibold  text-2xl text-white tracking-tight">
+            Ropa de Seguridad
+          </span>
+        </div>
+
+        <div class="mb-5   sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
+          <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold border-b mr-3 text-white">
+            Cuenta
+          </h4> 
+          <a href="" class="text-white">Mi cuenta</a> <br>
+          <a href="" class="text-white">Favoritos</a> <br>
+          <a href="" class="text-white">Carrito</a>  <br>
+          <a href="" class="text-white">Cerrar/Iniciar Sesión</a>
+        </div>
+
+        <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44 ">
+          <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold border-b mr-3 text-white">
+            Empresa
+          </h4>
+          <a href="" class="text-white">Envios</a> <br>
+          <a href="" class="text-white">Metodos de pago</a>  <br>
+          <a href="" class="text-white">Politicas de garantía</a> 
+        </div>
+         
+        <div class="mb-5  sm:mt-0 mt-10 md:mt-0 m-auto p-auto h-44  ">
+          <h4 class="mb-2 md:pt-14 sm:w-40 w-auto font-semibold text-white border-b mr-3 ">
+            Redes y contactos
+            </h4>
+            <ul class="mt-auto flex justify-center hover:text-white">
   
-    <script>
-      function Menu(e){
-        let list = document.querySelector('ul'); 
-        e.name === 'menu' ? (e.name = "close",  list.classList.
-        add('left-[25%]') , list.classList.add('opacity-100')) : 
-        (e.name = "menu" , list.classList.
-        remove('top-[25%]') , list.classList.remove('opacity-100'))
-      }
-    </script>
-    <script src="app.js"></script>
-    <script src="jquer.js"></script>
+              <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-2 mb-1" src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+    
+            </ul>
+          </div>
+
+          
+                   
+      </div>
+      <div class="w-full h-5 my-1 ">
+        &copy; Copyrigth
+     </div>
+    </div>
+
+
+
+  </div>
+
+   
+  
+</footer>
+
+
+
+
+
+
+
+
+<script src="../../../src/app.js"></script>
+<script src="../../../src/jquer.js"></script>
+
 </body>
+
 </html>
 
 
-<!--npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch  -->
+<!--<npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch>  -->
+ 

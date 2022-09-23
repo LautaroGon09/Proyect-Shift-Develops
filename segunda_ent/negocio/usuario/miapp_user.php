@@ -43,6 +43,35 @@ function buscar_datos($email)
 
     return true;
 }
+function existe_aprobar($email)
+{
+    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    $query = mysqli_query($con, "SELECT IdUsuario FROM usuario_aprobar WHERE Email='" . $email . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
+
+function buscar_datos_aprobar($email)
+{
+    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
+    $query = mysqli_query($con, "SELECT * FROM usuario_aprobar WHERE Email='" . $email . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
 function existe_cliente($email, $password)
 {
 
@@ -152,10 +181,10 @@ function existe_jefe($email, $password)
 function reg_clin($nombre, $apellido, $email, $password, $telefono)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
+    mysqli_query($con, "insert into usuario_aprobar (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
-    mysqli_query($con, "insert into telusr values (" . $id . ", '$telefono')");
-    mysqli_query($con, "insert into cliente values (" . $id . ")");
+    mysqli_query($con, "insert into telusr_aprobar values (" . $id . ", '$telefono')");
+    // mysqli_query($con, "insert into cliente values (" . $id . ")");
 
     mysqli_close($con);
 

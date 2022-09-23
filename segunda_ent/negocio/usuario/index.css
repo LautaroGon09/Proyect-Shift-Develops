@@ -1,0 +1,94 @@
+
+
+  .form{
+    width: 350px;
+    background-color: rgb(3, 3, 112);
+    padding: 20px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 5px 7px 10px #000;
+  }
+   
+.form h4,h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    text-align: center ;
+}
+
+.controls {
+    width: 80%;
+    background: rgb(3,3,112);
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #1f53c5;
+    font-size: 15px;
+    color: white;
+    margin-left: 10%;
+
+}
+
+.form a {
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 40%;
+}
+
+.form a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+.form .botons {
+    width: 50% ;
+    background:#1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: auto;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 25%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+.form select {
+    width: 80%;
+    width: 80%;
+    background: rgb(3,3,112);
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 15px;
+    color: white;
+    margin-left: 10%;
+}
+
+#tabla {
+    margin: 50px auto;
+    border-collapse: collapse;
+    width: 600px;
+    
+
+}
+
+table {
+    background: rgb(3,3,112);
+    text-align: left;
+    color: white;
+    width: 100%;
+}
+
+th,td {
+    border: solid 1px black;
+    padding: 10;
+
+}

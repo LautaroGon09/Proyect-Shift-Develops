@@ -28,34 +28,17 @@ if (isset($_POST['modificar'])) {
         $patron = '/[0-9]/';
 
         if (preg_match("$patron", ($_POST['nom2']))) {
-            echo "<p style='color:red;'>Solo letras en el nombre </p>";
-            header('refresh: 2; ');
+            echo '<script language="javascript">alert("Solo letras en el nombre");</script>';
+            header('refresh: 1; ');
+            die;
         }
         if (preg_match("$patron", ($_POST['ape2']))) {
-            echo "<p style='color:red;'>Solo letras en el apellido </p>";
-            header('refresh: 2; ');
+            echo '<script language="javascript">alert("Solo letras en el apellido");</script>';
+            header('refresh: 1; ');
+            die;
         }
 
-        if (empty($_POST['nom2'])) {
-            echo "<p style='color:red;'>Es necesario agregar un nombre </p>";
-            header('refresh: 2; ');
-        }
-        if (empty($_POST['ape2'])) {
-            echo "<p style='color:red;'>Es necesario agregar un apellido </p>";
-            header('refresh: 2; ');
-        }
-        if (empty($_POST['mail2'])) {
-            echo "<p style='color:red;'>Es necesario agregar un  email </p>";
-            header('refresh: 2; ');
-        }
-        if (empty($_POST['pass'])) {
-            echo "<p style='color:red;'>Es necesario agregar una contraseña </p>";
-            header('refresh: 2; ');
-        }
-        if (empty($_POST['tel2'])) {
-            echo "<p style='color:red;'>Es necesario agregar un telefono </p>";
-            header('refresh: 2; ');
-        }
+
         if (empty($_POST['nom2']) || empty($_POST['ape2']) || empty($_POST['mail2']) || empty($_POST['pass']) || empty($_POST['tel2'])) {
 
             return;
@@ -68,8 +51,8 @@ if (isset($_POST['modificar'])) {
         $mail2 = $_POST['mail2'];
         $tel2 = $_POST['tel2'];
         if (actualizar($nom2, $ape2, $pass, $mail2, $tel2, $ID)  == true) {
-            echo "<p style='color:green;'>Se ha actualizado correctamente</p>";
-            header('refresh: 1; url=../../dise/accion.php');
+            echo '<script language="javascript">alert("Se ha modificado correctamente");</script>';
+            header('refresh: 1; url=modificar.php');
         }
     }
 }
@@ -79,15 +62,15 @@ if (isset($_POST['modificar'])) {
 
 <form name="formulario" method="post" action="">
 
-    <input placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" maxlength="30" size="40">
+    <input placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
 
-    <input placeholder="" type="text" name="ape2" value="<?php echo $ape ?>" maxlength="30" size="40">
+    <input placeholder="" type="text" name="ape2" value="<?php echo $ape ?>" required maxlength="30" size="40">
 
-    <input placeholder="Ingrese nueva contraseña" value="" type="password" name="pass" maxlength="30" size="40">
+    <input placeholder="Ingrese nueva contraseña" value="" type="password" name="pass" required maxlength="30" size="40">
 
-    <input placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" maxlength="30" size="40">
+    <input placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" required maxlength="30" size="40">
 
-    <input placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" maxlength="30" size="40">
+    <input placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" required maxlength="30" size="40">
 
 
     <input type="submit" value="Modificar" name="modificar">

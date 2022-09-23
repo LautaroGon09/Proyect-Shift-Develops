@@ -6,13 +6,7 @@ if (isset($_POST['ingresar'])) {
 
         $email = $_POST['mail'];
         $pass = $_POST['pass'];
-
-        if (empty($_POST['mail'])) {
-            echo "<p style='color:red;'>Es necesario agregar un  email </p>";
-        }
-        if (empty($_POST['pass'])) {
-            echo "<p style='color:red;'>Es necesario agregar una contraseña </p>";
-        }
+        
         if( empty($_POST['mail']) || empty($_POST['pass'])) { 
 
             return ;
@@ -33,7 +27,9 @@ if (isset($_POST['ingresar'])) {
                 header('refresh: 1; url=../../dise/comprador.php');
             }
         } else {
-            echo "<p style='color:red;'>Usuario o contraseña incorrecta </p>";
+            echo '<script language="javascript">alert("Usuario o contraseña incorrectos");</script>';
+            header('refresh: 1;');
+
         }
     }
 }

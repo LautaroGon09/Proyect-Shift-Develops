@@ -33,10 +33,10 @@ function buscar_datos_prov($email)
 
 
 
-function agregar_prov($email, $direccion, $telefono)
+function agregar_prov($nombre, $email, $direccion, $telefono)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    mysqli_query($con, "insert into proveedor (Email, Direccion) VALUES('$email', '$direccion')") or die;
+    mysqli_query($con, "insert into proveedor (Nombre, Email, Direccion) VALUES('$nombre','$email', '$direccion')") or die;
     $id = mysqli_insert_id($con);
     mysqli_query($con, "insert into telproveedor values (" . $id . ", '$telefono')");
 
@@ -55,12 +55,11 @@ function eliminar_prov($email)
     return true;
 }
 
-function actualizar_prov($email, $direccion, $telefono, $ID)
+function actualizar_prov($nombre, $email, $direccion, $telefono, $ID)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "shiftdevelops");
-    mysqli_query($con, "UPDATE proveedor SET email = '$email', Direccion = '$direccion'
+    mysqli_query($con, "UPDATE proveedor SET Nombre = '$nombre', Email = '$email' , Direccion = '$direccion'  
         WHERE IdEmpresa = '$ID'") or die(mysqli_error($con));
     mysqli_query($con, "UPDATE telproveedor SET Num_Telefono = '$telefono' WHERE IdEmpresa = '$ID'") or die(mysqli_error($con));
     return true;
 }
-?>
